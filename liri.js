@@ -59,7 +59,7 @@ var params = {ncevUCF: 'nodejs'};
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
   if (!error) {
     console.log(tweets);
-    for(i=0; i<9; i++){
+    for(i=0; i<20; i++){
     console.log("Tweet: " + tweets[i].text);
     console.log("Tweeted at: " + tweets[i].created_at);
       fs.appendFile(textFile, "\n Tweet: "+tweets[i].text + "\n Tweeted at: "+ tweets[i].created_at + "\n", function(err) {
